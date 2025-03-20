@@ -42,3 +42,21 @@ test.c:217:9: error: implicit declaration of function 'parentesisBalanceados' [-
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e4c78e3
+Thu, Mar 20, 2025  5:58:02 PM: 
+ exercises.c | 15 +++++++--------
+ 1 file changed, 7 insertions(+), 8 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'eliminaElementos':
+exercises.c:81:25: error: comparison between pointer and integer [-Werror]
+       if (elem_eleminar == elem)
+                         ^~
+exercises.c: In function 'copia_pila':
+exercises.c:99:13: error: unused variable 'elemento' [-Werror=unused-variable]
+       void* elemento = top(P1);
+             ^~~~~~~~
+exercises.c:97:11: error: unused variable 'pila_aux' [-Werror=unused-variable]
+    Stack* pila_aux =create_stack();
+           ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8f2a3bb
