@@ -20,3 +20,25 @@ exercises.c:97:11: error: unused variable 'pila_aux' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 056c3f7
+Thu, Mar 20, 2025  5:56:07 PM: 
+ exercises.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+test.c: In function 'test_suma_lista':
+test.c:100:17: error: implicit declaration of function 'sumaLista' [-Werror=implicit-function-declaration]
+     int suma2 = sumaLista(L);
+                 ^~~~~~~~~
+test.c: In function 'test_elimina_elemento':
+test.c:132:5: error: implicit declaration of function 'eliminaElementos' [-Werror=implicit-function-declaration]
+     eliminaElementos(L, elem);
+     ^~~~~~~~~~~~~~~~
+test.c: In function 'test_copia_pila':
+test.c:175:5: error: implicit declaration of function 'copia_pila' [-Werror=implicit-function-declaration]
+     copia_pila(P1, P2);
+     ^~~~~~~~~~
+test.c: In function 'test_parentesis_balanceados':
+test.c:217:9: error: implicit declaration of function 'parentesisBalanceados' [-Werror=implicit-function-declaration]
+     if(!parentesisBalanceados(s)){
+         ^~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e4c78e3
