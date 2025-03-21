@@ -240,3 +240,17 @@ exercises.c:131:18: error: assignment to 'int' from 'void *' makes integer from 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 a340566
+Fri, Mar 21, 2025  1:36:27 AM: 
+ exercises.c | 21 ++++++++++++++++-----
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:24: error: initialization of 'void *' from 'char' makes pointer from integer without a cast [-Werror=int-conversion]
+  129 |       void* elemento = *cadena;
+      |                        ^
+exercises.c:134:22: error: comparison between pointer and integer [-Werror]
+  134 |       if (top(P_aux) == '('){
+      |                      ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0ea2222
