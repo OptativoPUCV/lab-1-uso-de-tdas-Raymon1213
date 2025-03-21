@@ -125,7 +125,6 @@ int parentesisBalanceados(char *cadena) {
    int contador1 = 0;
    int contador2 = 0;
    while (*cadena != '\0'){
-      cadena++;
       if (*cadena == '('){
          contador1++;
       }
