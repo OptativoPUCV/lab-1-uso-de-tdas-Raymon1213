@@ -254,3 +254,14 @@ exercises.c:134:22: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0ea2222
+Fri, Mar 21, 2025  1:37:19 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:134:22: error: comparison between pointer and integer [-Werror]
+  134 |       if (top(P_aux) == '('){
+      |                      ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+51c270c
