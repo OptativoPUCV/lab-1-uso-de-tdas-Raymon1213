@@ -126,7 +126,7 @@ int parentesisBalanceados(char *cadena) {
    int contador2 = 0;
    Stack* P_aux = create_stack();
    while (*cadena != '\0'){
-      void* elemento = cadena;
+      void* elemento = *cadena;
       push(P_aux, elemento);
       cadena++;
    }
@@ -139,8 +139,8 @@ int parentesisBalanceados(char *cadena) {
          contador2++;
          pop(P_aux);
       }
-   free(P_aux);
    }
+   free(P_aux);
    if (contador1 == contador2){
       return 1;
    }
