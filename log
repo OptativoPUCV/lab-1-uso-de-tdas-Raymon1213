@@ -206,3 +206,37 @@ exercises.c:127:8: error: variable 'parentesis' set but not used [-Werror=unused
 cc1.exe: all warnings being treated as errors
 Compilation failed
 019a53f
+Fri, Mar 21, 2025  1:30:18 AM: 
+ exercises.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:127:27: error: passing argument 1 of 'first' from incompatible pointer type [-Werror=incompatible-pointer-types]
+  127 |    int parentesis = first(cadena);
+      |                           ^~~~~~
+      |                           |
+      |                           char *
+In file included from exercises.c:6:
+arraylist.h:10:19: note: expected 'List *' but argument is of type 'char *'
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:127:21: error: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  127 |    int parentesis = first(cadena);
+      |                     ^~~~~
+exercises.c:128:21: error: comparison between pointer and integer [-Werror]
+  128 |    while (parentesis!= NULL){
+      |                     ^~
+exercises.c:131:25: error: passing argument 1 of 'next' from incompatible pointer type [-Werror=incompatible-pointer-types]
+  131 |       parentesis = next(cadena);
+      |                         ^~~~~~
+      |                         |
+      |                         char *
+arraylist.h:14:18: note: expected 'List *' but argument is of type 'char *'
+   14 | void* next(List *L);
+      |            ~~~~~~^
+exercises.c:131:18: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  131 |       parentesis = next(cadena);
+      |                  ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+a340566
