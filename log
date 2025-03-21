@@ -153,3 +153,56 @@ Fri, Mar 21, 2025  1:13:13 AM:
  tests:  4|1
 total_score: 50/70
 a1a5360
+Fri, Mar 21, 2025  1:29:04 AM: 
+ exercises.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:127:27: error: passing argument 1 of 'first' makes pointer from integer without a cast [-Werror=int-conversion]
+  127 |    int parentesis = first(*cadena);
+      |                           ^~~~~~~
+      |                           |
+      |                           char
+In file included from exercises.c:6:
+arraylist.h:10:19: note: expected 'List *' but argument is of type 'char'
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:127:21: error: initialization of 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  127 |    int parentesis = first(*cadena);
+      |                     ^~~~~
+exercises.c:128:17: error: passing argument 1 of 'first' makes pointer from integer without a cast [-Werror=int-conversion]
+  128 |    while (first(*cadena)!= NULL){
+      |                 ^~~~~~~
+      |                 |
+      |                 char
+arraylist.h:10:19: note: expected 'List *' but argument is of type 'char'
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:129:17: error: passing argument 1 of 'first' makes pointer from integer without a cast [-Werror=int-conversion]
+  129 |       if (first(*cadena) == '(') contador1++;
+      |                 ^~~~~~~
+      |                 |
+      |                 char
+arraylist.h:10:19: note: expected 'List *' but argument is of type 'char'
+   10 | void* first(List *L);
+      |             ~~~~~~^
+exercises.c:129:26: error: comparison between pointer and integer [-Werror]
+  129 |       if (first(*cadena) == '(') contador1++;
+      |                          ^~
+exercises.c:131:25: error: passing argument 1 of 'next' makes pointer from integer without a cast [-Werror=int-conversion]
+  131 |       parentesis = next(*cadena);
+      |                         ^~~~~~~
+      |                         |
+      |                         char
+arraylist.h:14:18: note: expected 'List *' but argument is of type 'char'
+   14 | void* next(List *L);
+      |            ~~~~~~^
+exercises.c:131:18: error: assignment to 'int' from 'void *' makes integer from pointer without a cast [-Werror=int-conversion]
+  131 |       parentesis = next(*cadena);
+      |                  ^
+exercises.c:127:8: error: variable 'parentesis' set but not used [-Werror=unused-but-set-variable]
+  127 |    int parentesis = first(*cadena);
+      |        ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+019a53f
