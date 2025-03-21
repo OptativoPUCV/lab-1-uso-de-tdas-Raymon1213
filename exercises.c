@@ -122,21 +122,5 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   int contador1 = 0;
-   int contador2 = 0;
-   while (*cadena != '\0'){
-      if (*cadena == '('){
-         contador1++;
-      }
-      else{
-         contador2++;
-      }
-      cadena++;
-   }
-   if (contador1 == contador2){
-      return 1;
-   }
-   else{
-      return 0;
-   } 
+   return 0;
 }
