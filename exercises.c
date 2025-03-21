@@ -130,7 +130,7 @@ int parentesisBalanceados(char *cadena) {
       cadena++;
    }
    while (P_aux != NULL){
-      if ((top(P_aux)) == '('){
+      if (*(char*)(top(P_aux)) == '('){
          contador1++;
          pop(P_aux);
       }
