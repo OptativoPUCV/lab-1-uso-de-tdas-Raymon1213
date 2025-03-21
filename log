@@ -281,3 +281,23 @@ exercises.c:129:24: error: initialization of 'void *' from 'char' makes pointer 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 78aa2be
+Fri, Mar 21, 2025  1:44:01 AM: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:19: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+  129 |       push(P_aux, *cadena);
+      |                   ^~~~~~~
+      |                   |
+      |                   char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:133:24: error: comparison between pointer and integer [-Werror]
+  133 |       if ((top(P_aux)) == '('){
+      |                        ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2ae056a
