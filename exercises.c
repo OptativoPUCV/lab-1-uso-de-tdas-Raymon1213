@@ -126,7 +126,7 @@ int parentesisBalanceados(char *cadena) {
    int contador2 = 0;
    Stack* P_aux = create_stack();
    while (*cadena != '\0'){
-      push(P_aux, cadena);
+      push(P_aux, *cadena);
       cadena++;
    }
    while (P_aux != NULL){
