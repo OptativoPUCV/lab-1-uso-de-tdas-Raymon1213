@@ -137,7 +137,7 @@ int parentesisBalanceados(char *cadena) {
    }
    free(P_aux);
    while(top(Pinvertida)!= NULL){
-      if(top(Pinvertida) != top(Pnormal)){
+      if(*(char*)top(Pinvertida) != *(char*)top(Pnormal)){
          condicion = 0;
          break;
       }
