@@ -375,3 +375,14 @@ exercises.c:126:11: error: unused variable 'Pnormal' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 423ae51
+Sat, Mar 22, 2025  1:57:04 AM: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:24: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  129 |       push(Pinvertida, (void*)cadena[i]);
+      |                        ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d156d55
