@@ -137,15 +137,15 @@ int parentesisBalanceados(char *cadena) {
    }
    free(P_aux);
    while(top(Pinvertida)!= NULL){
-      if(*(char*)top(Pinvertida) == ')' && *(char*)top(Pnormal) == '('){
+      if(*(char*)top(Pnormal) == ')' && *(char*)top(Pinvertida) == '('){
          pop(Pinvertida);
          pop(Pnormal);
       }
-      else if (*(char*)top(Pinvertida) == '[' && *(char*)top(Pnormal) == ']'){
+      else if (*(char*)top(Pnormal) == '[' && *(char*)top(Pinvertida) == ']'){
          pop(Pinvertida);
          pop(Pnormal);
       }
-      else if (*(char*)top(Pinvertida) == '{' && *(char*)top(Pnormal) == '}'){
+      else if (*(char*)top(Pnormal) == '{' && *(char*)top(Pinvertida) == '}'){
          pop(Pinvertida);
          pop(Pnormal);
       }
