@@ -404,3 +404,19 @@ Sat, Mar 22, 2025  2:09:39 AM:
  tests:  4|1
 total_score: 50/70
 89b2b68
+Sat, Mar 22, 2025  2:12:12 AM: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:131:8: error: 'parantesis' undeclared (first use in this function); did you mean 'parentisis'?
+  131 |       *parantesis = cadena[i];
+      |        ^~~~~~~~~~
+      |        parentisis
+exercises.c:131:8: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:130:13: error: unused variable 'parentisis' [-Werror=unused-variable]
+  130 |       char* parentisis = (char*)malloc(sizeof(char));
+      |             ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0cab320

@@ -127,6 +127,8 @@ int parentesisBalanceados(char *cadena) {
    Stack* Pnormal = create_stack();
    Stack* P_aux = create_stack();
    for (int i = 0; cadena[i] != '\0';i++){
+      char* parentisis = (char*)malloc(sizeof(char));
+      *parantesis = cadena[i];
       push(Pinvertida, (void*)&cadena[i]);
       push(P_aux, (void*)&cadena[i]);
    }
