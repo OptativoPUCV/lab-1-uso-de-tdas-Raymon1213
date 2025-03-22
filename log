@@ -352,3 +352,26 @@ Fri, Mar 21, 2025  1:57:48 AM:
  tests:  4|1
 total_score: 50/70
 0be30c3
+Sat, Mar 22, 2025  1:54:32 AM: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:30: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+  129 |       push(Pinvertida, cadena[i]);
+      |                        ~~~~~~^~~
+      |                              |
+      |                              char
+In file included from exercises.c:7:
+stack.h:11:31: note: expected 'void *' but argument is of type 'char'
+   11 | void push(Stack *stack, void *data) { pushFront(stack, data); }
+      |                         ~~~~~~^~~~
+exercises.c:127:11: error: unused variable 'Paux' [-Werror=unused-variable]
+  127 |    Stack* Paux = create_stack();
+      |           ^~~~
+exercises.c:126:11: error: unused variable 'Pnormal' [-Werror=unused-variable]
+  126 |    Stack* Pnormal = create_stack();
+      |           ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+423ae51
